@@ -1,5 +1,6 @@
 /* --- Global Layout --- */
-body { 
+body {
+    min-height: 100vh;
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
     background-color: #eceff1;
     margin: 0;
