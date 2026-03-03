@@ -12,7 +12,7 @@ body {
 /* --- The Box (Card) --- */
 .calculator-card {
     background: #ffffff;
-    padding: 30px; 
+    padding: 200px; 
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     width: 95%;
@@ -30,7 +30,7 @@ h1 {
 
 /* --- The Slideshow Container --- */
 figure {
-    margin: 15px auto;
+    margin: 10px auto;
     padding: 0;
     display: block;
     width: 100%;
@@ -41,7 +41,7 @@ figure {
 #slide_image {
     width: 100%;
     max-width: 600px;
-    height: 400px;
+    height: 320px;              /* Reduced from 400px */
     object-fit: cover;
     border-radius: 4px;
     display: block;
@@ -107,5 +107,6 @@ figure {
 }
 
 @media (max-width: 600px) {
-    #slide_image { height: 250px; }
+    #slide_image { height: 220px; }
 }
+
