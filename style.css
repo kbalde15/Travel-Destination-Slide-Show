@@ -1,53 +1,100 @@
+/* --- Global Layout --- */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f8ff;
+font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+background-color: #eceff1;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
 }
-
+/* --- The Box (Card) --- */
+.calculator-card {
+background: #ffffff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+width: 95%;
+max-width: 1000px;
+text-align: center;
+border: 1px solid #ddd;
+}
 h1 {
-    margin-top: 20px;
+margin-top: 0;
+color: #37474f;
+font-size: 1.4rem;
+letter-spacing: 0.5px;
 }
-
-.slideshow-container {
-    margin: 20px auto;
-    width: 700px;
-    height: 400px;
-    position: relative;
+/* --- The Slideshow Container --- */
+figure {
+margin: 15px auto;
+padding: 0;
+display: block;
+width: 100%;
+max-width: 600px; /* Anchors everything to the image width */
 }
-
+/* --- Image Sizing & Snappy Transition --- */
 #slide_image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: opacity 1s ease-in-out;
+width: 100%;
+max-width: 600px;
+height: 400px;
+object-fit: cover;
+border-radius: 4px;
+display: block;
+margin: 0 auto;
+background-color: #1a1b1c;
+border: 1px solid #333;
+box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+cursor: pointer;
+transition: opacity 0.4s ease-in-out, transform 0.3s ease;
 }
-
-#caption {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .fade-in {
-    opacity: 1;
+animation: fadeIn 0.4s ease-out;
 }
-
-#slide_image:not(.fade-in) {
-    opacity: 0;
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
 }
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #0077cc;
-    color: white;
-    border-radius: 5px;
+/* --- Caption Styling (The Pill) --- */
+#slide_text {
+display: inline-block;
+background: #f1f3f4;
+padding: 4px 20px;
+border-radius: 20px;
+margin-top: 10px;
+font-weight: 600;
+font-size: 0.95rem;
+color: #2c2c2c;
+border: 1px solid #e0e0e0;
 }
-
-button.paused {
-    background-color: #999;
+/* --- Footnote (Simplified centering) --- */
+#footnote {
+font-size: 0.82rem;
+color: #777;
+margin-top: 12px;
+font-style: italic;
+text-align: center; /* Standard centering */
+}
+/* --- Pause Button (Distinctive Utility Look) --- */
+.control-btn {
+display: block; /* Put it on its own line */
+margin: 10px auto 0; /* Center it under the footnote text */
+font-family: inherit;
+font-weight: 600;
+font-size: 0.65rem;
+text-transform: uppercase;
+letter-spacing: 1px;
+padding: 6px 14px;
+cursor: pointer;
+background-color: #37474f;
+color: white;
+border: none;
+border-radius: 8px; /* Rectangular to contrast the pill caption */
+transition: background 0.2s;
+}
+.control-btn.paused {
+background-color: #90a4ae;
+}
+@media (max-width: 600px) {
+#slide_image { height: 250px; }
 }
