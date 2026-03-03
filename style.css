@@ -1,15 +1,14 @@
 /* --- Global Layout --- */
-body {
-    min-height: 100vh;
+body { 
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
     background-color: #eceff1;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;       /* changed */
+    overflow: hidden;    /* added */
 }
-
 /* --- The Box (Card) --- */
 .calculator-card {
     background: #ffffff;
