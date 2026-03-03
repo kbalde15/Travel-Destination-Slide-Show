@@ -41,7 +41,8 @@ figure {
 #slide_image {
     width: 100%;
     max-width: 600px;
-    height: 320px;              /* Reduced from 400px */
+    height: 45vh;
+    max-height: 350px;              /* Reduced from 400px */
     object-fit: cover;
     border-radius: 4px;
     display: block;
@@ -109,4 +110,5 @@ figure {
 @media (max-width: 600px) {
     #slide_image { height: 220px; }
 }
+
 
